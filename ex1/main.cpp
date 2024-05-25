@@ -181,11 +181,11 @@ bool isNodeIsolated()
     */
 }
 
-bool isCircuitEulerian()
+bool isCircuitHamiltonian()
 {
     // return true if it is(so all the nodes can be accesed in the network)
 
-    int countOnes = 0; // will count how many values of 1 we have in the matrix, as we need N/2 + 1 in order to have an eulerian graph
+    int countOnes = 0; // will count how many values of 1 we have in the matrix, as we need N/2 + 1 in order to have an hamiltonian graph
 
     for (int i = 0; i < N; i++)
     {
@@ -203,7 +203,7 @@ bool isCircuitEulerian()
     if (countOnes >= N - 1)
         return true; // our graph is eulerian
 
-    return false; // no euclidian circuit found, so it's impossible to have every device connected
+    return false; // no hamiltonian circuit found, so it's impossible to have every device connected
 }
 
 bool connected()
@@ -218,9 +218,9 @@ bool connected()
         return false;
     // at least one node is islated, so at least one device is not connected
 
-    if (isCircuitEulerian() == true)
+    if (isCircuitHamiltonian() == true)
         return true;
-    // graph has a eulerian cycle, so all nodes are connected in the network
+    // graph has a hamiltonian cycle, so all nodes are connected in the network
 
     return false;
     // means that the devices are not connected
