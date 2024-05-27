@@ -1,4 +1,4 @@
-# Big Homework 1 of DSA 2024
+# Big Homework 2 of DSA 2024
 ## Exercise 1 - Network Connectivity Checker
 ### 1. Usage
 Compile both `main.cpp` and `network.cpp`, then run the resulting executable.
